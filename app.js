@@ -5,6 +5,12 @@ import {gradeRouter} from "./routes/gradeRouter.js";
 
 import { db } from './models/index.js';
 
+import dotenv from "dotenv";
+
+dotenv.config();
+
+console.log(process.env.BASE_URL);
+
 (async () => {
   try {
     await db.mongoose.connect(db.url, {
